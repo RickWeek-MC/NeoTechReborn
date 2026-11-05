@@ -1,0 +1,26 @@
+{
+  "type": "techreborn:industrial_grinder",
+  "fluid": {
+    "amount": {
+      "value": 1000
+    },
+    "fluid": "techreborn:mercury"
+  },
+  "ingredients": [
+    {
+      "tag": "c:ores/iridium"
+    }
+  ],
+  "outputs": [
+    {
+      "count": 2,
+      "id": "techreborn:raw_iridium"
+    },
+    {
+      "count": 2,
+      "id": "techreborn:platinum_small_dust"
+    }
+  ],
+  "power": 64,
+  "time": 100
+}

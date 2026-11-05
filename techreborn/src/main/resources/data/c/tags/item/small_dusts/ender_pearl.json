@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:ender_pearl_small_dust",
+      "required": false
+    }
+  ]
+}

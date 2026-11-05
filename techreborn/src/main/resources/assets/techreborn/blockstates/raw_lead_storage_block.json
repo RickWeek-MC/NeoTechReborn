@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "techreborn:block/raw_lead_storage_block"
+    }
+  }
+}

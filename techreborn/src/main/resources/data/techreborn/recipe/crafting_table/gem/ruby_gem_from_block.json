@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "techreborn:ruby_storage_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "techreborn:ruby_gem"
+  }
+}

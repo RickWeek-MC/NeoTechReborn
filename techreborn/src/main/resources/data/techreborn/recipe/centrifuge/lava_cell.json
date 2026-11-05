@@ -1,0 +1,34 @@
+{
+  "type": "techreborn:centrifuge",
+  "ingredients": [
+    {
+      "type": "neoforge:components",
+      "items": "techreborn:cell",
+      "components": {
+        "techreborn:fluid": "minecraft:lava"
+      },
+      "strict": false,
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "count": 16,
+      "id": "techreborn:cell"
+    },
+    {
+      "count": 4,
+      "id": "minecraft:copper_ingot"
+    },
+    {
+      "count": 1,
+      "id": "techreborn:electrum_ingot"
+    },
+    {
+      "count": 1,
+      "id": "techreborn:tungsten_small_dust"
+    }
+  ],
+  "power": 5,
+  "time": 1500
+}

@@ -1,0 +1,12 @@
+{
+  "loader": "techreborn:dynamic_cell",
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "particle": "techreborn:item/cell_base"
+  },
+  "children": {
+    "base": { "parent": "techreborn:item/cell_base" },
+    "background": { "parent": "techreborn:item/cell_background" },
+    "glass": { "parent": "techreborn:item/cell_glass" }
+  }
+}

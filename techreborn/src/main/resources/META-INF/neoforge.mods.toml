@@ -1,0 +1,37 @@
+modLoader = "javafml"
+loaderVersion = "${loader_version_range}"
+license = "${mod_license}"
+issueTrackerURL = "https://github.com/TechReborn/TechReborn/issues"
+
+[[mods]]
+modId = "techreborn"
+version = "${mod_version}"
+displayName = "Neo Tech Reborn"
+logoFile = "assets/techreborn/icon.png"
+authors = "${mod_authors}"
+description = '''
+NeoForge port of Tech Reborn, a standalone tech mod with machines to gather
+and process resources. Original mod by the Tech Reborn team (MIT license).
+Beta: expect rough edges.
+'''
+
+[[dependencies.techreborn]]
+modId = "neoforge"
+type = "required"
+versionRange = "${neo_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.techreborn]]
+modId = "minecraft"
+type = "required"
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.techreborn]]
+modId = "reborncore"
+type = "required"
+versionRange = "[${mod_version},)"
+ordering = "AFTER"
+side = "BOTH"

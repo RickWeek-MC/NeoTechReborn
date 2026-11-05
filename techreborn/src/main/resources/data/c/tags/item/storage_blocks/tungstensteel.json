@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:tungstensteel_storage_block",
+      "required": false
+    }
+  ]
+}

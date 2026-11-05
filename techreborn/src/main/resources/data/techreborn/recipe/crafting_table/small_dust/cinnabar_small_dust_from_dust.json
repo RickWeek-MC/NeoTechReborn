@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "techreborn:cinnabar_dust"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "techreborn:cinnabar_small_dust"
+  }
+}

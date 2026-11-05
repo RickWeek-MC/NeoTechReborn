@@ -1,0 +1,5 @@
+{
+  "_comment": "DEV ONLY. Borrows a vanilla texture so the test machine needs no art of its own.",
+  "parent": "minecraft:block/cube_all",
+  "textures": { "all": "minecraft:block/iron_block" }
+}

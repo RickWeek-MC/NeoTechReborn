@@ -1,0 +1,23 @@
+{
+  "type": "techreborn:rolling_machine",
+  "category": "misc",
+  "key": {
+    "A": {
+      "tag": "c:ingots/nickel"
+    },
+    "B": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "B B",
+    "ABA"
+  ],
+  "power": 5,
+  "result": {
+    "count": 3,
+    "id": "techreborn:cupronickel_heating_coil"
+  },
+  "time": 250
+}

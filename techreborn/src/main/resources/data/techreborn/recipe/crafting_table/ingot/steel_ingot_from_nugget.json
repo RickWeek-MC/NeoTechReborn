@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "techreborn:steel_nugget"
+    },
+    {
+      "item": "techreborn:steel_nugget"
+    },
+    {
+      "item": "techreborn:steel_nugget"
+    },
+    {
+      "item": "techreborn:steel_nugget"
+    },
+    {
+      "item": "techreborn:steel_nugget"
+    },
+    {
+      "item": "techreborn:steel_nugget"
+    },
+    {
+      "item": "techreborn:steel_nugget"
+    },
+    {
+      "item": "techreborn:steel_nugget"
+    },
+    {
+      "item": "techreborn:steel_nugget"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "techreborn:steel_ingot"
+  }
+}

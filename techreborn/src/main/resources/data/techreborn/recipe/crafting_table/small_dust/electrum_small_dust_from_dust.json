@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "techreborn:electrum_dust"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "techreborn:electrum_small_dust"
+  }
+}

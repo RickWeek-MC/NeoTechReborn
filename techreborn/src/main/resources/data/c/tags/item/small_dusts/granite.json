@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:granite_small_dust",
+      "required": false
+    }
+  ]
+}

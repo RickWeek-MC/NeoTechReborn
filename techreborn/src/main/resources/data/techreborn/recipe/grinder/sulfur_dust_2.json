@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:sulfurs"
+      }
+    }
+  ],
+  "type": "techreborn:grinder",
+  "ingredients": [
+    {
+      "tag": "c:sulfurs"
+    }
+  ],
+  "outputs": [
+    {
+      "count": 1,
+      "id": "techreborn:sulfur_dust"
+    }
+  ],
+  "power": 2,
+  "time": 200
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:wood_plate",
+      "required": false
+    }
+  ]
+}

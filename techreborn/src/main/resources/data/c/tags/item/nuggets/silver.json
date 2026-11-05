@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:silver_nugget",
+      "required": false
+    }
+  ]
+}

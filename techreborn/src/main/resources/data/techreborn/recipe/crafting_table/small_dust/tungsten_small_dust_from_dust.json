@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "techreborn:raw_tungsten"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "techreborn:tungsten_small_dust"
+  }
+}

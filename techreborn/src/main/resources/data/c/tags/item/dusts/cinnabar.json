@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:cinnabar_dust",
+      "required": false
+    }
+  ]
+}

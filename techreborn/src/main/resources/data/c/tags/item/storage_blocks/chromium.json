@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:chrome_storage_block",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:advanced_alloy_ingot",
+      "required": false
+    }
+  ]
+}

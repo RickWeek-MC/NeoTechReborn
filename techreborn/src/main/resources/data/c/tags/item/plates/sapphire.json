@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:sapphire_plate",
+      "required": false
+    }
+  ]
+}

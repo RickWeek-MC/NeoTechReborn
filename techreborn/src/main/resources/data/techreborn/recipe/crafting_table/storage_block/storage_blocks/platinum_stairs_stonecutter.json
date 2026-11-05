@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "c:storage_blocks/platinum"
+  },
+  "result": {
+    "count": 1,
+    "id": "techreborn:platinum_storage_block_stairs"
+  }
+}

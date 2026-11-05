@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:diamond_small_dust",
+      "required": false
+    }
+  ]
+}

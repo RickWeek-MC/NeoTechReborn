@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "c:storage_blocks/iridium"
+  },
+  "result": {
+    "count": 1,
+    "id": "techreborn:iridium_storage_block_stairs"
+  }
+}

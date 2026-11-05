@@ -1,0 +1,6 @@
+{
+  "_comment": "DEV ONLY. A multipart entry with no condition applies to every blockstate, so the FACING and ACTIVE properties of BlockMachineBase need no enumeration here.",
+  "multipart": [
+    { "apply": { "model": "reborncore:block/test_machine" } }
+  ]
+}

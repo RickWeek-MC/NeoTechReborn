@@ -1,0 +1,55 @@
+plugins {
+	id 'net.neoforged.moddev' version '2.0.78'
+}
+
+base.archivesName = 'neotechreborn'
+
+neoForge {
+	version = project.neo_version
+
+	accessTransformers.from('src/main/resources/META-INF/accesstransformer.cfg')
+
+	runs {
+		client {
+			client()
+			systemProperty 'neoforge.enabledGameTestNamespaces', 'techreborn'
+		}
+		server {
+			server()
+			programArgument '--nogui'
+			systemProperty 'neoforge.enabledGameTestNamespaces', 'techreborn'
+		}
+	}
+
+	mods {
+		techreborn {
+			sourceSet sourceSets.main
+		}
+		reborncore {
+			sourceSet project(':reborncore').sourceSets.main
+		}
+	}
+}
+
+dependencies {
+	implementation project(':reborncore')
+
+	// JEI is optional: the API is only needed to compile the plugin in client/compat/jei, and the
+	// full mod is only here so runClient shows the recipes. No version is enforced on players.
+	compileOnly "mezz.jei:jei-1.21.1-neoforge-api:${jei_version}"
+	runtimeOnly "mezz.jei:jei-1.21.1-neoforge:${jei_version}"
+}
+
+processResources {
+	var props = [
+		minecraft_version      : project.minecraft_version,
+		minecraft_version_range: project.minecraft_version_range,
+		neo_version_range      : project.neo_version_range,
+		loader_version_range   : project.loader_version_range,
+		mod_version            : project.version,
+		mod_license            : project.mod_license,
+		mod_authors            : project.mod_authors,
+	]
+	inputs.properties props
+	filesMatching('META-INF/neoforge.mods.toml') { expand props }
+}

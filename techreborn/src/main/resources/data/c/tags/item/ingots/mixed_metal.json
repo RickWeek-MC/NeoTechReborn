@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:mixed_metal_ingot",
+      "required": false
+    }
+  ]
+}

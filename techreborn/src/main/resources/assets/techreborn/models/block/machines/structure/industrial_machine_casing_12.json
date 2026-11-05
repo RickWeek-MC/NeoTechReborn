@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "techreborn:block/machines/structure/industrial_machine_casing",
+    "down": "techreborn:block/machines/structure/industrial_machine_casing",
+    "up": "techreborn:block/machines/structure/industrial_machine_casing",
+    "north": "techreborn:block/machines/structure/industrial_machine_casing_middle",
+    "south": "techreborn:block/machines/structure/industrial_machine_casing_middle",
+    "east": "techreborn:block/machines/structure/industrial_machine_casing",
+    "west": "techreborn:block/machines/structure/industrial_machine_casing"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:bauxite_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:cinnabar_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:deepslate_bauxite_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:deepslate_galena_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:deepslate_iridium_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:deepslate_lead_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:deepslate_peridot_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:deepslate_ruby_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:deepslate_sapphire_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:deepslate_sheldonite_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:deepslate_silver_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:deepslate_sodalite_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:deepslate_tin_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:deepslate_tungsten_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:galena_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:iridium_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:lead_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:peridot_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:pyrite_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:ruby_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:sapphire_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:sheldonite_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:silver_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:sodalite_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:sphalerite_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:tin_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:tungsten_ore",
+      "required": false
+    }
+  ]
+}

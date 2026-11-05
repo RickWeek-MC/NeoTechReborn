@@ -1,0 +1,90 @@
+/*
+ * This file is part of RebornCore, licensed under the MIT License (MIT).
+ *
+ * Copyright (c) 2021 TeamReborn
+ *
+ * NeoForge port (c) 2026 RickWeek, based on the upstream Fabric sources.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+package reborncore.client.multiblock;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.VertexConsumer;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.renderer.block.BlockRenderDispatcher;
+import net.minecraft.client.renderer.texture.OverlayTexture;
+import net.minecraft.core.BlockPos;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.item.ItemDisplayContext;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.LiquidBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.FluidState;
+import reborncore.common.blockentity.MultiblockWriter;
+
+import java.util.function.BiPredicate;
+
+/**
+ * Draws the ghost blocks of a multiblock preview.
+ * <p>
+ * Port note: a straight mappings conversion. BlockRenderManager.renderBlock is
+ * BlockRenderDispatcher.renderBatched, RenderLayers.getBlockLayer is
+ * ItemBlockRenderTypes.getChunkRenderType, and the item render goes through ItemRenderer.renderStatic
+ * with ItemDisplayContext.FIXED.
+ */
+public record HologramRenderer(Level view, PoseStack matrix, MultiBufferSource vertexConsumerProvider,
+							   float scale) implements MultiblockWriter {
+	private static final BlockPos OUT_OF_WORLD_POS = new BlockPos(0, 260, 0); // Bad hack; disables lighting
+
+	@Override
+	public MultiblockWriter add(int x, int y, int z, BiPredicate<BlockGetter, BlockPos> predicate, BlockState state) {
+		final BlockRenderDispatcher blockRenderManager = Minecraft.getInstance().getBlockRenderer();
+		matrix.pushPose();
+		matrix.translate(x, y, z);
+		matrix.translate(0.5, 0.5, 0.5);
+		matrix.scale(scale, scale, scale);
+
+		if (state.getBlock() instanceof LiquidBlock) {
+			FluidState fluidState = state.getFluidState();
+			Minecraft.getInstance().getItemRenderer().renderStatic(
+				new ItemStack(fluidState.getType().getBucket()),
+				ItemDisplayContext.FIXED,
+				15728880,
+				OverlayTexture.NO_OVERLAY,
+				matrix,
+				vertexConsumerProvider,
+				view,
+				0
+			);
+		} else {
+			matrix.translate(-0.5, -0.5, -0.5);
+			VertexConsumer consumer = vertexConsumerProvider.getBuffer(ItemBlockRenderTypes.getChunkRenderType(state));
+			blockRenderManager.renderBatched(state, OUT_OF_WORLD_POS, view, matrix, consumer, false, RandomSource.create());
+		}
+
+		matrix.popPose();
+		return this;
+	}
+}

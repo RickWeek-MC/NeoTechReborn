@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:spessartine_dust",
+      "required": false
+    }
+  ]
+}

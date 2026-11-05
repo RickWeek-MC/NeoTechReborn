@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:sodalite_dust",
+      "required": false
+    }
+  ]
+}

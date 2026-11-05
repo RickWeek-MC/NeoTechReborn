@@ -1,0 +1,55 @@
+/*
+ * This file is part of TechReborn, licensed under the MIT License (MIT).
+ *
+ * Copyright (c) 2020 TechReborn
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+package techreborn.client.events;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.neoforged.neoforge.network.PacketDistributor;
+import reborncore.client.ClientJumpEvent;
+import techreborn.blockentity.machine.tier1.ElevatorBlockEntity;
+import techreborn.packets.serverbound.JumpPayload;
+
+/**
+ * Port note: upstream registered this on RebornCore's ClientJumpEvent (a Fabric Event). Here
+ * RebornCoreClientEvents posts the NeoForge version of that event on the game bus every client tick the
+ * jump key is down, so TechRebornClient subscribes this listener there.
+ */
+public class ClientJumpHandler {
+
+	public static void onJump(ClientJumpEvent event) {
+		LocalPlayer player = Minecraft.getInstance().player;
+
+		if (player == null) {
+			return;
+		}
+
+		BlockEntity blockEntity = player.level().getBlockEntity(player.blockPosition().below());
+
+		if (blockEntity instanceof ElevatorBlockEntity) {
+			PacketDistributor.sendToServer(new JumpPayload(player.blockPosition()));
+		}
+	}
+}

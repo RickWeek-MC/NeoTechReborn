@@ -1,0 +1,44 @@
+{
+  "type": "techreborn:industrial_electrolyzer",
+  "ingredients": [
+    {
+      "count": 4,
+      "item": "techreborn:obsidian_dust"
+    },
+    {
+      "count": 3,
+      "type": "neoforge:components",
+      "items": "techreborn:cell",
+      "components": {
+        "techreborn:fluid": "minecraft:empty"
+      },
+      "strict": false
+    }
+  ],
+  "outputs": [
+    {
+      "count": 2,
+      "id": "techreborn:magnesium_small_dust"
+    },
+    {
+      "count": 5,
+      "id": "minecraft:iron_nugget"
+    },
+    {
+      "components": {
+        "techreborn:fluid": "techreborn:silicon"
+      },
+      "count": 1,
+      "id": "techreborn:cell"
+    },
+    {
+      "components": {
+        "techreborn:fluid": "techreborn:compressed_air"
+      },
+      "count": 2,
+      "id": "techreborn:cell"
+    }
+  ],
+  "power": 50,
+  "time": 1500
+}

@@ -1,0 +1,89 @@
+/*
+ * This file is part of TechReborn, licensed under the MIT License (MIT).
+ *
+ * Copyright (c) 2020 TechReborn
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+package techreborn.init;
+
+import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.resources.ResourceLocation;
+import reborncore.common.crafting.RebornRecipe;
+import techreborn.recipe.recipes.BlastFurnaceRecipe;
+import techreborn.recipe.recipes.FluidReplicatorRecipe;
+import techreborn.recipe.recipes.FusionReactorRecipe;
+import techreborn.recipe.recipes.IndustrialGrinderRecipe;
+import techreborn.recipe.recipes.IndustrialSawmillRecipe;
+import techreborn.recipe.recipes.AssemblingMachineRecipe;
+import techreborn.recipe.recipes.CentrifugeRecipe;
+import techreborn.recipe.recipes.FluidGeneratorRecipe;
+import reborncore.common.crafting.RecipeManager;
+import techreborn.recipe.recipes.RollingMachineRecipe;
+
+public class ModRecipes {
+
+	/**
+	 * Nota di porting: i tipi di ricetta con una classe propria (blast furnace, centrifuga,
+	 * mulino industriale, segheria, reattore a fusione, replicatore di fluidi, laminatrice,
+	 * generatori a fluido, macchina di assemblaggio) arriveranno col loro blocco di macchine:
+	 * la riga va riaggiunta qui insieme alla classe. Finche' manca la riga, le ricette di quel
+	 * tipo nei file JSON non vengono caricate (errore nel log, il resto funziona).
+	 */
+	public static void init() {
+		// serve solo a far caricare la classe durante la costruzione della mod, cosi' i tipi
+		// finiscono nella coda di RecipeManager prima che venga chiusa
+	}
+
+	public static final RecipeType<RebornRecipe> ALLOY_SMELTER = RecipeManager.newRecipeType(ResourceLocation.parse("techreborn:alloy_smelter"));
+	public static final RecipeType<AssemblingMachineRecipe> ASSEMBLING_MACHINE = RecipeManager.newRecipeType(ResourceLocation.parse("techreborn:assembling_machine"), AssemblingMachineRecipe.CODEC, AssemblingMachineRecipe.PACKET_CODEC);
+	public static final RecipeType<RebornRecipe> CHEMICAL_REACTOR = RecipeManager.newRecipeType(ResourceLocation.parse("techreborn:chemical_reactor"));
+	public static final RecipeType<RebornRecipe> COMPRESSOR = RecipeManager.newRecipeType(ResourceLocation.parse("techreborn:compressor"));
+	// blocco M5: multiblocchi
+	public static final RecipeType<BlastFurnaceRecipe> BLAST_FURNACE = RecipeManager.newRecipeType(ResourceLocation.parse("techreborn:blast_furnace"), BlastFurnaceRecipe.CODEC, BlastFurnaceRecipe.PACKET_CODEC);
+	public static final RecipeType<IndustrialGrinderRecipe> INDUSTRIAL_GRINDER = RecipeManager.newRecipeType(ResourceLocation.parse("techreborn:industrial_grinder"), IndustrialGrinderRecipe.CODEC, IndustrialGrinderRecipe.PACKET_CODEC);
+	public static final RecipeType<IndustrialSawmillRecipe> INDUSTRIAL_SAWMILL = RecipeManager.newRecipeType(ResourceLocation.parse("techreborn:industrial_sawmill"), IndustrialSawmillRecipe.CODEC, IndustrialSawmillRecipe.PACKET_CODEC);
+	public static final RecipeType<FluidReplicatorRecipe> FLUID_REPLICATOR = RecipeManager.newRecipeType(ResourceLocation.parse("techreborn:fluid_replicator"), FluidReplicatorRecipe.CODEC, FluidReplicatorRecipe.PACKET_CODEC);
+	public static final RecipeType<FusionReactorRecipe> FUSION_REACTOR = RecipeManager.newRecipeType(ResourceLocation.parse("techreborn:fusion_reactor"), FusionReactorRecipe.CODEC, FusionReactorRecipe.PACKET_CODEC);
+
+	public static final RecipeType<RebornRecipe> DISTILLATION_TOWER = RecipeManager.newRecipeType(ResourceLocation.parse("techreborn:distillation_tower"));
+	public static final RecipeType<RebornRecipe> EXTRACTOR = RecipeManager.newRecipeType(ResourceLocation.parse("techreborn:extractor"));
+	public static final RecipeType<RebornRecipe> GRINDER = RecipeManager.newRecipeType(ResourceLocation.parse("techreborn:grinder"));
+	public static final RecipeType<RebornRecipe> IMPLOSION_COMPRESSOR = RecipeManager.newRecipeType(ResourceLocation.parse("techreborn:implosion_compressor"));
+	public static final RecipeType<RebornRecipe> INDUSTRIAL_ELECTROLYZER = RecipeManager.newRecipeType(ResourceLocation.parse("techreborn:industrial_electrolyzer"));
+	public static final RecipeType<RebornRecipe> RECYCLER = RecipeManager.newRecipeType(ResourceLocation.parse("techreborn:recycler"));
+	public static final RecipeType<RebornRecipe> SCRAPBOX = RecipeManager.newRecipeType(ResourceLocation.parse("techreborn:scrapbox"));
+	public static final RecipeType<RebornRecipe> VACUUM_FREEZER = RecipeManager.newRecipeType(ResourceLocation.parse("techreborn:vacuum_freezer"));
+	public static final RecipeType<RebornRecipe> SOLID_CANNING_MACHINE = RecipeManager.newRecipeType(ResourceLocation.parse("techreborn:solid_canning_machine"));
+	public static final RecipeType<RebornRecipe> WIRE_MILL = RecipeManager.newRecipeType(ResourceLocation.parse("techreborn:wire_mill"));
+
+	// blocco M3: i cinque generatori a fluido. Una ricetta dice solo "questo fluido vale tanta
+	// energia per secchio": nessun ingrediente, nessuna uscita, nessun tempo.
+	public static final RecipeType<FluidGeneratorRecipe> THERMAL_GENERATOR = RecipeManager.newRecipeType(ResourceLocation.parse("techreborn:thermal_generator"), FluidGeneratorRecipe.CODEC, FluidGeneratorRecipe.PACKET_CODEC);
+	public static final RecipeType<FluidGeneratorRecipe> GAS_GENERATOR = RecipeManager.newRecipeType(ResourceLocation.parse("techreborn:gas_generator"), FluidGeneratorRecipe.CODEC, FluidGeneratorRecipe.PACKET_CODEC);
+	public static final RecipeType<FluidGeneratorRecipe> DIESEL_GENERATOR = RecipeManager.newRecipeType(ResourceLocation.parse("techreborn:diesel_generator"), FluidGeneratorRecipe.CODEC, FluidGeneratorRecipe.PACKET_CODEC);
+	public static final RecipeType<FluidGeneratorRecipe> SEMI_FLUID_GENERATOR = RecipeManager.newRecipeType(ResourceLocation.parse("techreborn:semi_fluid_generator"), FluidGeneratorRecipe.CODEC, FluidGeneratorRecipe.PACKET_CODEC);
+	public static final RecipeType<FluidGeneratorRecipe> PLASMA_GENERATOR = RecipeManager.newRecipeType(ResourceLocation.parse("techreborn:plasma_generator"), FluidGeneratorRecipe.CODEC, FluidGeneratorRecipe.PACKET_CODEC);
+	// blocco M6
+	public static final RecipeType<CentrifugeRecipe> CENTRIFUGE = RecipeManager.newRecipeType(ResourceLocation.parse("techreborn:centrifuge"), CentrifugeRecipe.CODEC, CentrifugeRecipe.PACKET_CODEC);
+
+	// blocco M8
+	public static final RecipeType<RollingMachineRecipe> ROLLING_MACHINE = RecipeManager.newRecipeType(ResourceLocation.parse("techreborn:rolling_machine"), RollingMachineRecipe.CODEC, RollingMachineRecipe.PACKET_CODEC);
+}

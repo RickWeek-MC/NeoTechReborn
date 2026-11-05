@@ -1,0 +1,7 @@
+{
+  "type": "techreborn:features",
+  "kind": "rubber_tree",
+  "features": [
+    "techreborn:rubber_tree_patch"
+  ]
+}

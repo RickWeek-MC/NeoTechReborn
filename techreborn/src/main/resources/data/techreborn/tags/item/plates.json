@@ -1,0 +1,165 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:advanced_alloy_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:aluminum_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:brass_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:bronze_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:carbon_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:chrome_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:coal_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:copper_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:diamond_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:electrum_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:emerald_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:gold_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:invar_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:iridium_alloy_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:iridium_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:iron_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:lapis_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:lazurite_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:lead_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:magnalium_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:nickel_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:obsidian_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:peridot_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:platinum_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:quartz_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:red_garnet_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:redstone_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:refined_iron_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:ruby_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:sapphire_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:silicon_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:silver_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:steel_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:tin_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:titanium_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:tungsten_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:tungstensteel_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:wood_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:yellow_garnet_plate",
+      "required": false
+    },
+    {
+      "id": "techreborn:zinc_plate",
+      "required": false
+    }
+  ]
+}

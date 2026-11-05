@@ -1,0 +1,93 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:advanced_alloy_ingot",
+      "required": false
+    },
+    {
+      "id": "techreborn:aluminum_ingot",
+      "required": false
+    },
+    {
+      "id": "techreborn:brass_ingot",
+      "required": false
+    },
+    {
+      "id": "techreborn:bronze_ingot",
+      "required": false
+    },
+    {
+      "id": "techreborn:chrome_ingot",
+      "required": false
+    },
+    {
+      "id": "techreborn:electrum_ingot",
+      "required": false
+    },
+    {
+      "id": "techreborn:hot_tungstensteel_ingot",
+      "required": false
+    },
+    {
+      "id": "techreborn:invar_ingot",
+      "required": false
+    },
+    {
+      "id": "techreborn:iridium_alloy_ingot",
+      "required": false
+    },
+    {
+      "id": "techreborn:iridium_ingot",
+      "required": false
+    },
+    {
+      "id": "techreborn:lead_ingot",
+      "required": false
+    },
+    {
+      "id": "techreborn:mixed_metal_ingot",
+      "required": false
+    },
+    {
+      "id": "techreborn:nickel_ingot",
+      "required": false
+    },
+    {
+      "id": "techreborn:platinum_ingot",
+      "required": false
+    },
+    {
+      "id": "techreborn:refined_iron_ingot",
+      "required": false
+    },
+    {
+      "id": "techreborn:silver_ingot",
+      "required": false
+    },
+    {
+      "id": "techreborn:steel_ingot",
+      "required": false
+    },
+    {
+      "id": "techreborn:tin_ingot",
+      "required": false
+    },
+    {
+      "id": "techreborn:titanium_ingot",
+      "required": false
+    },
+    {
+      "id": "techreborn:tungsten_ingot",
+      "required": false
+    },
+    {
+      "id": "techreborn:tungstensteel_ingot",
+      "required": false
+    },
+    {
+      "id": "techreborn:zinc_ingot",
+      "required": false
+    }
+  ]
+}

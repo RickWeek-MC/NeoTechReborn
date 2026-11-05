@@ -1,0 +1,18 @@
+{
+  "type": "reborncore:padded",
+  "category": "misc",
+  "key": {
+    "U": {
+      "item": "techreborn:uu_matter"
+    }
+  },
+  "pattern": [
+    "UUU",
+    "UU ",
+    " U "
+  ],
+  "result": {
+    "count": 1,
+    "id": "techreborn:chrome_dust"
+  }
+}

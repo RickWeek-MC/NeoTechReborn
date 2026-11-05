@@ -1,0 +1,55 @@
+{
+  "values": {
+    "techreborn:rubber_button": {
+      "burn_time": 300
+    },
+    "techreborn:rubber_log": {
+      "burn_time": 300
+    },
+    "techreborn:rubber_log_stripped": {
+      "burn_time": 300
+    },
+    "techreborn:rubber_wood": {
+      "burn_time": 300
+    },
+    "techreborn:stripped_rubber_wood": {
+      "burn_time": 300
+    },
+    "techreborn:rubber_planks": {
+      "burn_time": 300
+    },
+    "techreborn:rubber_slab": {
+      "burn_time": 150
+    },
+    "techreborn:rubber_fence": {
+      "burn_time": 300
+    },
+    "techreborn:rubber_fence_gate": {
+      "burn_time": 300
+    },
+    "techreborn:rubber_stair": {
+      "burn_time": 300
+    },
+    "techreborn:rubber_trapdoor": {
+      "burn_time": 300
+    },
+    "techreborn:rubber_pressure_plate": {
+      "burn_time": 300
+    },
+    "techreborn:rubber_door": {
+      "burn_time": 200
+    },
+    "techreborn:rubber_sapling": {
+      "burn_time": 100
+    },
+    "techreborn:wood_plate": {
+      "burn_time": 300
+    },
+    "techreborn:treetap": {
+      "burn_time": 200
+    },
+    "techreborn:resin_basin": {
+      "burn_time": 300
+    }
+  }
+}

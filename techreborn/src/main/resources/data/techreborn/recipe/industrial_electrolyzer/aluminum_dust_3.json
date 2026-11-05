@@ -1,0 +1,47 @@
+{
+  "type": "techreborn:industrial_electrolyzer",
+  "ingredients": [
+    {
+      "count": 29,
+      "item": "techreborn:lazurite_dust"
+    },
+    {
+      "count": 10,
+      "type": "neoforge:components",
+      "items": "techreborn:cell",
+      "components": {
+        "techreborn:fluid": "minecraft:empty"
+      },
+      "strict": false
+    }
+  ],
+  "outputs": [
+    {
+      "count": 3,
+      "id": "techreborn:aluminum_dust"
+    },
+    {
+      "components": {
+        "techreborn:fluid": "techreborn:silicon"
+      },
+      "count": 3,
+      "id": "techreborn:cell"
+    },
+    {
+      "components": {
+        "techreborn:fluid": "techreborn:calcium"
+      },
+      "count": 3,
+      "id": "techreborn:cell"
+    },
+    {
+      "components": {
+        "techreborn:fluid": "techreborn:sodium"
+      },
+      "count": 4,
+      "id": "techreborn:cell"
+    }
+  ],
+  "power": 60,
+  "time": 1460
+}

@@ -1,0 +1,26 @@
+{
+  "type": "techreborn:rolling_machine",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:gold_ingot"
+    },
+    "C": {
+      "item": "minecraft:stick"
+    },
+    "D": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "A A",
+    "ACA",
+    "ADA"
+  ],
+  "power": 5,
+  "result": {
+    "count": 8,
+    "id": "minecraft:powered_rail"
+  },
+  "time": 250
+}

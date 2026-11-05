@@ -1,0 +1,26 @@
+{
+  "type": "techreborn:assembling_machine",
+  "ingredients": [
+    {
+      "count": 2,
+      "tag": "c:plates/aluminum"
+    },
+    {
+      "type": "neoforge:components",
+      "items": "techreborn:cell",
+      "components": {
+        "techreborn:fluid": "techreborn:lithium"
+      },
+      "strict": false,
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "count": 1,
+      "id": "techreborn:lithium_ion_battery"
+    }
+  ],
+  "power": 20,
+  "time": 200
+}

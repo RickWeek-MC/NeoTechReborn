@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:deepslate_galena_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:galena_ore",
+      "required": false
+    }
+  ]
+}

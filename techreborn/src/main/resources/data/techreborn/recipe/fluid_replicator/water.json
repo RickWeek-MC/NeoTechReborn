@@ -1,0 +1,17 @@
+{
+  "type": "techreborn:fluid_replicator",
+  "fluid": {
+    "amount": {
+      "value": 1000
+    },
+    "fluid": "minecraft:water"
+  },
+  "ingredients": [
+    {
+      "item": "techreborn:uu_matter"
+    }
+  ],
+  "outputs": [],
+  "power": 20,
+  "time": 20
+}

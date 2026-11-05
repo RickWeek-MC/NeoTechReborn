@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "c:storage_blocks/tungstensteel"
+  },
+  "result": {
+    "count": 1,
+    "id": "techreborn:tungstensteel_storage_block_wall"
+  }
+}

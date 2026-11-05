@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:rubber_log",
+      "required": false
+    },
+    {
+      "id": "techreborn:rubber_log_stripped",
+      "required": false
+    },
+    {
+      "id": "techreborn:rubber_wood",
+      "required": false
+    },
+    {
+      "id": "techreborn:stripped_rubber_wood",
+      "required": false
+    }
+  ]
+}

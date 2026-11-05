@@ -1,0 +1,26 @@
+{
+  "type": "techreborn:industrial_grinder",
+  "fluid": {
+    "amount": {
+      "value": 1000
+    },
+    "fluid": "minecraft:water"
+  },
+  "ingredients": [
+    {
+      "tag": "c:ores/sodalite"
+    }
+  ],
+  "outputs": [
+    {
+      "count": 12,
+      "id": "techreborn:sodalite_dust"
+    },
+    {
+      "count": 3,
+      "id": "techreborn:aluminum_dust"
+    }
+  ],
+  "power": 64,
+  "time": 100
+}

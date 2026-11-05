@@ -1,0 +1,171 @@
+/*
+ * This file is part of TechReborn, licensed under the MIT License (MIT).
+ *
+ * Copyright (c) 2020 TechReborn
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+package techreborn.blocks.misc;
+
+import net.minecraft.ChatFormatting;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.Nullable;
+import reborncore.api.ToolManager;
+import reborncore.common.BaseBlockEntityProvider;
+import reborncore.common.blocks.BlockWrenchEventHandler;
+import reborncore.common.util.WrenchUtils;
+import techreborn.blockentity.machine.misc.AlarmBlockEntity;
+import techreborn.init.TRBlockSettings;
+
+import java.util.List;
+
+/**
+ * Port notes: same renames as LampBlock (box/getShape/getStateForPlacement/RenderShape).
+ */
+public class BlockAlarm extends BaseBlockEntityProvider {
+	public static final DirectionProperty FACING = BlockStateProperties.FACING;
+	public static final BooleanProperty ACTIVE = BooleanProperty.create("active");
+	protected final VoxelShape[] shape;
+
+	public BlockAlarm() {
+		super(TRBlockSettings.alarm());
+		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(ACTIVE, false));
+		this.shape = GenCuboidShapes(3, 10);
+		BlockWrenchEventHandler.wrenchableBlocks.add(this);
+	}
+
+	private VoxelShape[] GenCuboidShapes(double depth, double width) {
+		double culling = (16.0D - width) / 2;
+		return new VoxelShape[]{
+				Block.box(culling, 16.0 - depth, culling, 16.0 - culling, 16.0D, 16.0 - culling),
+				Block.box(culling, 0.0D, culling, 16.0D - culling, depth, 16.0 - culling),
+				Block.box(culling, culling, 16.0 - depth, 16.0 - culling, 16.0 - culling, 16.0D),
+				Block.box(culling, culling, 0.0D, 16.0 - culling, 16.0 - culling, depth),
+				Block.box(16.0 - depth, culling, culling, 16.0D, 16.0 - culling, 16.0 - culling),
+				Block.box(0.0D, culling, culling, depth, 16.0 - culling, 16.0 - culling)
+		};
+	}
+
+	public static boolean isActive(BlockState state) {
+		return state.getValue(ACTIVE);
+	}
+
+	public static Direction getFacing(BlockState state) {
+		return state.getValue(FACING);
+	}
+
+	public static void setFacing(Direction facing, Level level, BlockPos pos) {
+		level.setBlockAndUpdate(pos, level.getBlockState(pos).setValue(FACING, facing));
+	}
+
+	public static void setActive(boolean active, Level level, BlockPos pos) {
+		Direction facing = level.getBlockState(pos).getValue(FACING);
+		BlockState state = level.getBlockState(pos).setValue(ACTIVE, active).setValue(FACING, facing);
+		level.setBlock(pos, state, 3);
+	}
+
+	// BaseTileBlock
+	@Nullable
+	@Override
+	public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+		return new AlarmBlockEntity(pos, state);
+	}
+
+	// Block
+	@Override
+	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+		builder.add(FACING, ACTIVE);
+	}
+
+	@Nullable
+	@Override
+	public BlockState getStateForPlacement(BlockPlaceContext context) {
+		for (Direction facing : context.getNearestLookingDirections()) {
+			BlockState state = this.defaultBlockState().setValue(FACING, facing.getOpposite());
+			if (state.canSurvive(context.getLevel(), context.getClickedPos())) {
+				return state;
+			}
+		}
+		return null;
+	}
+
+	@Override
+	protected InteractionResult useWithoutItem(BlockState state, Level worldIn, BlockPos pos, Player playerIn, BlockHitResult hitResult) {
+		ItemStack stack = playerIn.getItemInHand(InteractionHand.MAIN_HAND);
+		BlockEntity blockEntity = worldIn.getBlockEntity(pos);
+
+		// We extended BaseTileBlock. Thus, we should always have blockEntity entity. I hope.
+		if (blockEntity == null) {
+			return InteractionResult.FAIL;
+		}
+
+		if (!stack.isEmpty() && ToolManager.INSTANCE.canHandleTool(stack)) {
+			if (WrenchUtils.handleWrench(stack, worldIn, pos, playerIn, hitResult.getDirection())) {
+				return InteractionResult.SUCCESS;
+			}
+		}
+
+		if (playerIn.isShiftKeyDown()) {
+			((AlarmBlockEntity) blockEntity).rightClick(playerIn);
+			return InteractionResult.SUCCESS;
+
+		}
+
+		return super.useWithoutItem(state, worldIn, pos, playerIn, hitResult);
+	}
+
+	@Override
+	protected RenderShape getRenderShape(BlockState state) {
+		return RenderShape.MODEL;
+	}
+
+	@Override
+	protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext shapeContext) {
+		return shape[getFacing(state).ordinal()];
+	}
+
+	@Override
+	public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag options) {
+		tooltip.add(Component.translatable("techreborn.tooltip.alarm").withStyle(ChatFormatting.GRAY));
+	}
+
+}

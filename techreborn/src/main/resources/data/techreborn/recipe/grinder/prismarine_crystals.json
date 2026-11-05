@@ -1,0 +1,16 @@
+{
+  "type": "techreborn:grinder",
+  "ingredients": [
+    {
+      "tag": "c:froglights"
+    }
+  ],
+  "outputs": [
+    {
+      "count": 2,
+      "id": "minecraft:prismarine_crystals"
+    }
+  ],
+  "power": 2,
+  "time": 400
+}

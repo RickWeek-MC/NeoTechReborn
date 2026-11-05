@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "techreborn:hot_tungstensteel_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "techreborn:hot_tungstensteel_nugget"
+  }
+}

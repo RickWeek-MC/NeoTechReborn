@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "techreborn:raw_tin"
+    },
+    {
+      "item": "techreborn:raw_tin"
+    },
+    {
+      "item": "techreborn:raw_tin"
+    },
+    {
+      "item": "techreborn:raw_tin"
+    },
+    {
+      "item": "techreborn:raw_tin"
+    },
+    {
+      "item": "techreborn:raw_tin"
+    },
+    {
+      "item": "techreborn:raw_tin"
+    },
+    {
+      "item": "techreborn:raw_tin"
+    },
+    {
+      "item": "techreborn:raw_tin"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "techreborn:raw_tin_storage_block"
+  }
+}

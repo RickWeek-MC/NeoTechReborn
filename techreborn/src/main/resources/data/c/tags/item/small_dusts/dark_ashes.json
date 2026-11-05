@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:dark_ashes_small_dust",
+      "required": false
+    }
+  ]
+}

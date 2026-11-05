@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:refined_iron_ingot",
+      "required": false
+    }
+  ]
+}

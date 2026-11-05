@@ -1,0 +1,25 @@
+{
+  "type": "techreborn:solid_canning_machine",
+  "ingredients": [
+    {
+      "type": "neoforge:components",
+      "items": "techreborn:cell",
+      "components": {
+        "techreborn:fluid": "techreborn:helium"
+      },
+      "strict": false
+    },
+    {
+      "count": 2,
+      "tag": "c:ingots/tin"
+    }
+  ],
+  "outputs": [
+    {
+      "count": 1,
+      "id": "techreborn:helium_coolant_cell_60k"
+    }
+  ],
+  "power": 1,
+  "time": 60
+}

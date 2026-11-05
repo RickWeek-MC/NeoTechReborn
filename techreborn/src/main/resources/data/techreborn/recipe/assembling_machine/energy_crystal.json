@@ -1,0 +1,20 @@
+{
+  "type": "techreborn:assembling_machine",
+  "ingredients": [
+    {
+      "count": 2,
+      "item": "techreborn:synthetic_redstone_crystal"
+    },
+    {
+      "tag": "c:plates/silicon"
+    }
+  ],
+  "outputs": [
+    {
+      "count": 1,
+      "id": "techreborn:energy_crystal"
+    }
+  ],
+  "power": 40,
+  "time": 200
+}

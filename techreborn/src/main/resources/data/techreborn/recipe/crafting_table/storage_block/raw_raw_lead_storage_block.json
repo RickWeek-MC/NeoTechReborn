@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "techreborn:raw_lead"
+    },
+    {
+      "item": "techreborn:raw_lead"
+    },
+    {
+      "item": "techreborn:raw_lead"
+    },
+    {
+      "item": "techreborn:raw_lead"
+    },
+    {
+      "item": "techreborn:raw_lead"
+    },
+    {
+      "item": "techreborn:raw_lead"
+    },
+    {
+      "item": "techreborn:raw_lead"
+    },
+    {
+      "item": "techreborn:raw_lead"
+    },
+    {
+      "item": "techreborn:raw_lead"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "techreborn:raw_lead_storage_block"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "N": {
+      "item": "techreborn:netherite_nugget"
+    }
+  },
+  "pattern": [
+    "NDN",
+    "DDD",
+    "NDN"
+  ],
+  "result": {
+    "count": 1,
+    "id": "techreborn:template_template"
+  }
+}

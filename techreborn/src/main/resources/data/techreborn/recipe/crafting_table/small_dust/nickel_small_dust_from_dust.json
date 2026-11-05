@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "techreborn:nickel_dust"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "techreborn:nickel_small_dust"
+  }
+}

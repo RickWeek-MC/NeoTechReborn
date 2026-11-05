@@ -1,0 +1,26 @@
+{
+  "loader": "neoforge:composite",
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "particle": "minecraft:item/bucket"
+  },
+  "children": {
+    "base": {
+      "parent": "techreborn:item/bucket_base"
+    },
+    "background": {
+      "parent": "techreborn:item/bucket_background"
+    },
+    "fluid": {
+      "parent": "techreborn:item/bucket_fluid_template",
+      "textures": {
+        "texture": "techreborn:block/fluids/deuterium_still"
+      }
+    }
+  },
+  "item_render_order": [
+    "base",
+    "background",
+    "fluid"
+  ]
+}

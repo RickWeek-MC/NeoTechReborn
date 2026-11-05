@@ -1,0 +1,82 @@
+/*
+ * This file is part of RebornCore, licensed under the MIT License (MIT).
+ *
+ * Copyright (c) 2021 TeamReborn
+ *
+ * NeoForge port (c) 2026 RickWeek, based on the upstream Fabric sources.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+package reborncore.client.gui.config.elements;
+
+import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import reborncore.client.gui.GuiBase;
+import reborncore.client.gui.GuiSprites;
+
+import java.util.function.Predicate;
+
+public class CheckBoxElement extends ElementBase {
+	private final Component label;
+	private final Predicate<CheckBoxElement> ticked;
+	private final Runnable onChange;
+	private final GuiSprites.CheckBox checkBoxSprite;
+
+	public CheckBoxElement(Component label, int x, int y,
+						Predicate<CheckBoxElement> ticked,
+						Runnable onChange) {
+		super(x, y, GuiSprites.LIGHT_CHECK_BOX.normal(), 13, 13);
+		this.checkBoxSprite = GuiSprites.LIGHT_CHECK_BOX;
+		this.label = label;
+		this.ticked = ticked;
+		this.onChange = onChange;
+		updateSprites();
+	}
+
+	private void updateSprites() {
+		if (ticked.test(this)) {
+			setSprite(checkBoxSprite.ticked());
+		} else {
+			setSprite(checkBoxSprite.normal());
+		}
+	}
+
+	@Override
+	public boolean onClick(GuiBase<?> gui, double mouseX, double mouseY) {
+		onChange.run();
+		updateSprites();
+		return true;
+	}
+
+	@Override
+	public void draw(GuiGraphics guiGraphics, GuiBase<?> gui, int mouseX, int mouseY) {
+		ResourceLocation sprite = checkBoxSprite.normal();
+		int textureWidth = getWidth();
+		int textureHeight = getHeight();
+		if (ticked.test(this)) {
+			textureWidth = 16;
+			sprite = checkBoxSprite.ticked();
+		}
+		drawSprite(guiGraphics, gui, sprite, getX(), getY(), textureWidth, textureHeight);
+		drawText(guiGraphics, gui, label, getX() + 18, ((getY() + getHeight() / 2) - (gui.getTextRenderer().lineHeight / 2)), 0xFFFFFFFF);
+	}
+
+}

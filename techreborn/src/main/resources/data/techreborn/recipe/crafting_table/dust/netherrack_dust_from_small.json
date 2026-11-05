@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "techreborn:netherrack_small_dust"
+    },
+    {
+      "item": "techreborn:netherrack_small_dust"
+    },
+    {
+      "item": "techreborn:netherrack_small_dust"
+    },
+    {
+      "item": "techreborn:netherrack_small_dust"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "techreborn:netherrack_dust"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "type": "techreborn:chemical_reactor",
+  "ingredients": [
+    {
+      "type": "neoforge:components",
+      "items": "techreborn:cell",
+      "components": {
+        "techreborn:fluid": "techreborn:compressed_air"
+      },
+      "strict": false
+    },
+    {
+      "type": "neoforge:components",
+      "items": "techreborn:cell",
+      "components": {
+        "techreborn:fluid": "techreborn:nitrogen"
+      },
+      "strict": false
+    }
+  ],
+  "outputs": [
+    {
+      "components": {
+        "techreborn:fluid": "techreborn:nitrogen_dioxide"
+      },
+      "count": 2,
+      "id": "techreborn:cell"
+    }
+  ],
+  "power": 30,
+  "time": 400
+}

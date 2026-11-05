@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:deepslate_ruby_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:ruby_ore",
+      "required": false
+    }
+  ]
+}

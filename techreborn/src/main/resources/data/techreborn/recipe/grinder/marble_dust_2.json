@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:marble"
+      }
+    }
+  ],
+  "type": "techreborn:grinder",
+  "ingredients": [
+    {
+      "tag": "c:marble"
+    }
+  ],
+  "outputs": [
+    {
+      "count": 1,
+      "id": "techreborn:marble_dust"
+    }
+  ],
+  "power": 2,
+  "time": 180
+}

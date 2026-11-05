@@ -1,0 +1,29 @@
+{
+  "type": "techreborn:centrifuge",
+  "ingredients": [
+    {
+      "type": "neoforge:components",
+      "items": "techreborn:cell",
+      "components": {
+        "techreborn:fluid": "techreborn:deuterium"
+      },
+      "strict": false,
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "components": {
+        "techreborn:fluid": "techreborn:tritium"
+      },
+      "count": 1,
+      "id": "techreborn:cell"
+    },
+    {
+      "count": 3,
+      "id": "techreborn:cell"
+    }
+  ],
+  "power": 10,
+  "time": 3000
+}

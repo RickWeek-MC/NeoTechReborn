@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:raw_iridium",
+      "required": false
+    },
+    {
+      "id": "techreborn:raw_lead",
+      "required": false
+    },
+    {
+      "id": "techreborn:raw_silver",
+      "required": false
+    },
+    {
+      "id": "techreborn:raw_tin",
+      "required": false
+    },
+    {
+      "id": "techreborn:raw_tungsten",
+      "required": false
+    }
+  ]
+}

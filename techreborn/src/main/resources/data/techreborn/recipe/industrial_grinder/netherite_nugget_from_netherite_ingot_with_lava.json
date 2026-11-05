@@ -1,0 +1,22 @@
+{
+  "type": "techreborn:industrial_grinder",
+  "fluid": {
+    "amount": {
+      "value": 1000
+    },
+    "fluid": "minecraft:lava"
+  },
+  "ingredients": [
+    {
+      "item": "minecraft:netherite_ingot"
+    }
+  ],
+  "outputs": [
+    {
+      "count": 9,
+      "id": "techreborn:netherite_nugget"
+    }
+  ],
+  "power": 64,
+  "time": 100
+}

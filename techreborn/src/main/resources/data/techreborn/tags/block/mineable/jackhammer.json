@@ -1,0 +1,76 @@
+{
+  "values": [
+    {
+      "id": "#minecraft:base_stone_nether",
+      "required": false
+    },
+    {
+      "id": "#minecraft:base_stone_overworld",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dirt",
+      "required": false
+    },
+    {
+      "id": "#minecraft:ice",
+      "required": false
+    },
+    {
+      "id": "#minecraft:snow",
+      "required": false
+    },
+    {
+      "id": "#minecraft:nylium",
+      "required": false
+    },
+    {
+      "id": "#minecraft:wart_blocks",
+      "required": false
+    },
+    {
+      "id": "#c:stone",
+      "required": false
+    },
+    {
+      "id": "minecraft:end_stone",
+      "required": false
+    },
+    {
+      "id": "minecraft:sand",
+      "required": false
+    },
+    {
+      "id": "minecraft:red_sand",
+      "required": false
+    },
+    {
+      "id": "minecraft:sandstone",
+      "required": false
+    },
+    {
+      "id": "minecraft:red_sandstone",
+      "required": false
+    },
+    {
+      "id": "minecraft:gravel",
+      "required": false
+    },
+    {
+      "id": "minecraft:calcite",
+      "required": false
+    },
+    {
+      "id": "minecraft:snow",
+      "required": false
+    },
+    {
+      "id": "minecraft:soul_sand",
+      "required": false
+    },
+    {
+      "id": "minecraft:soul_soil",
+      "required": false
+    }
+  ]
+}

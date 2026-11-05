@@ -1,0 +1,10 @@
+{
+  "values": {
+    "techreborn:rubber_log": {
+      "stripped_block": "techreborn:rubber_log_stripped"
+    },
+    "techreborn:rubber_wood": {
+      "stripped_block": "techreborn:stripped_rubber_wood"
+    }
+  }
+}

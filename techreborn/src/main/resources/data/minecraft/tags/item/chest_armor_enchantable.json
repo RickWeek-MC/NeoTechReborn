@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "techreborn:bronze_chestplate",
+    "techreborn:ruby_chestplate",
+    "techreborn:sapphire_chestplate",
+    "techreborn:peridot_chestplate",
+    "techreborn:silver_chestplate",
+    "techreborn:steel_chestplate",
+    "techreborn:nano_chestplate",
+    "techreborn:quantum_chestplate"
+  ]
+}

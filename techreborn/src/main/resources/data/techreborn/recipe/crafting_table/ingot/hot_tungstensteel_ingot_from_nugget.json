@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "techreborn:hot_tungstensteel_nugget"
+    },
+    {
+      "item": "techreborn:hot_tungstensteel_nugget"
+    },
+    {
+      "item": "techreborn:hot_tungstensteel_nugget"
+    },
+    {
+      "item": "techreborn:hot_tungstensteel_nugget"
+    },
+    {
+      "item": "techreborn:hot_tungstensteel_nugget"
+    },
+    {
+      "item": "techreborn:hot_tungstensteel_nugget"
+    },
+    {
+      "item": "techreborn:hot_tungstensteel_nugget"
+    },
+    {
+      "item": "techreborn:hot_tungstensteel_nugget"
+    },
+    {
+      "item": "techreborn:hot_tungstensteel_nugget"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "techreborn:hot_tungstensteel_ingot"
+  }
+}

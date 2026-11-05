@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "techreborn:chrome_nugget"
+    },
+    {
+      "item": "techreborn:chrome_nugget"
+    },
+    {
+      "item": "techreborn:chrome_nugget"
+    },
+    {
+      "item": "techreborn:chrome_nugget"
+    },
+    {
+      "item": "techreborn:chrome_nugget"
+    },
+    {
+      "item": "techreborn:chrome_nugget"
+    },
+    {
+      "item": "techreborn:chrome_nugget"
+    },
+    {
+      "item": "techreborn:chrome_nugget"
+    },
+    {
+      "item": "techreborn:chrome_nugget"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "techreborn:chrome_ingot"
+  }
+}

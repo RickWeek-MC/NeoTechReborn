@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:iridium_reinforced_stone_storage_block",
+      "required": false
+    }
+  ]
+}

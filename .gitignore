@@ -1,0 +1,36 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Game / dev runs
+run/
+runs/
+logs/
+*.log
+hs_err_pid*
+
+# IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Eclipse / VS Code
+.classpath
+.project
+.settings/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local-only stuff: reference sources used while porting, scratch work, big jars
+_upstream/
+_wip/
+PORTING_NOTES.md
+PORTING_NOTES_REBORNCORE.md
+tools/*.jar
+tools/compilecheck/

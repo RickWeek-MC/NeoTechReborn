@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:redstone_small_dust",
+      "required": false
+    }
+  ]
+}

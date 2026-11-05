@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:peridot_gem",
+      "required": false
+    },
+    {
+      "id": "techreborn:red_garnet_gem",
+      "required": false
+    },
+    {
+      "id": "techreborn:ruby_gem",
+      "required": false
+    },
+    {
+      "id": "techreborn:sapphire_gem",
+      "required": false
+    },
+    {
+      "id": "techreborn:yellow_garnet_gem",
+      "required": false
+    }
+  ]
+}

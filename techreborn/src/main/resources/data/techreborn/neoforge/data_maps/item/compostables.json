@@ -1,0 +1,22 @@
+{
+  "values": {
+    "techreborn:rubber_sapling": {
+      "chance": 0.3
+    },
+    "techreborn:rubber_leaves": {
+      "chance": 0.3
+    },
+    "techreborn:plantball": {
+      "chance": 1.0
+    },
+    "techreborn:compressed_plantball": {
+      "chance": 1.0
+    },
+    "techreborn:saw_dust": {
+      "chance": 0.3
+    },
+    "techreborn:saw_small_dust": {
+      "chance": 0.1
+    }
+  }
+}

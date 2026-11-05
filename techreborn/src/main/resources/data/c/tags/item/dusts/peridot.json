@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:peridot_dust",
+      "required": false
+    }
+  ]
+}

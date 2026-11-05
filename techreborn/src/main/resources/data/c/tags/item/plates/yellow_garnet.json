@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:yellow_garnet_plate",
+      "required": false
+    }
+  ]
+}

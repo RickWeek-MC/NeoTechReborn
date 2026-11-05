@@ -1,0 +1,34 @@
+{
+  "type": "techreborn:fusion_reactor",
+  "ingredients": [
+    {
+      "type": "neoforge:components",
+      "items": "techreborn:cell",
+      "components": {
+        "techreborn:fluid": "techreborn:tritium"
+      },
+      "strict": false
+    },
+    {
+      "type": "neoforge:components",
+      "items": "techreborn:cell",
+      "components": {
+        "techreborn:fluid": "techreborn:deuterium"
+      },
+      "strict": false
+    }
+  ],
+  "minSize": 1,
+  "outputs": [
+    {
+      "components": {
+        "techreborn:fluid": "techreborn:helium3"
+      },
+      "count": 1,
+      "id": "techreborn:cell"
+    }
+  ],
+  "power": 16384,
+  "startEnergy": 40000000,
+  "time": 2048
+}

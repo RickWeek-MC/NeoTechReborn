@@ -1,0 +1,30 @@
+{
+  "type": "techreborn:industrial_grinder",
+  "fluid": {
+    "amount": {
+      "value": 1000
+    },
+    "fluid": "techreborn:mercury"
+  },
+  "ingredients": [
+    {
+      "tag": "c:ores/galena"
+    }
+  ],
+  "outputs": [
+    {
+      "count": 2,
+      "id": "techreborn:galena_dust"
+    },
+    {
+      "count": 1,
+      "id": "techreborn:sulfur_dust"
+    },
+    {
+      "count": 1,
+      "id": "techreborn:raw_silver"
+    }
+  ],
+  "power": 64,
+  "time": 100
+}

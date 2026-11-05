@@ -1,0 +1,229 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:almandine_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:andesite_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:andradite_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:ashes_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:basalt_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:bauxite_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:calcite_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:charcoal_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:chrome_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:cinnabar_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:clay_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:coal_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:dark_ashes_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:diamond_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:diorite_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:electrum_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:emerald_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:ender_eye_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:ender_pearl_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:endstone_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:flint_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:galena_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:glowstone_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:granite_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:grossular_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:invar_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:lazurite_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:magnesium_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:manganese_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:marble_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:netherrack_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:nickel_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:obsidian_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:olivine_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:peridot_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:phosphorous_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:platinum_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:pyrite_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:pyrope_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:quartz_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:red_garnet_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:redstone_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:ruby_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:saltpeter_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:sapphire_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:saw_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:sodalite_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:spessartine_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:sphalerite_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:steel_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:sulfur_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:titanium_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:tungsten_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:uvarovite_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:yellow_garnet_small_dust",
+      "required": false
+    },
+    {
+      "id": "techreborn:zinc_small_dust",
+      "required": false
+    }
+  ]
+}

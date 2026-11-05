@@ -1,0 +1,19 @@
+{
+  "type": "techreborn:chemical_reactor",
+  "ingredients": [
+    {
+      "item": "minecraft:blue_dye"
+    },
+    {
+      "item": "minecraft:ochre_froglight"
+    }
+  ],
+  "outputs": [
+    {
+      "count": 1,
+      "id": "minecraft:verdant_froglight"
+    }
+  ],
+  "power": 30,
+  "time": 400
+}

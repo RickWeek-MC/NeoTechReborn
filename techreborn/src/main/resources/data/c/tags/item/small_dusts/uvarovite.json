@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:uvarovite_small_dust",
+      "required": false
+    }
+  ]
+}

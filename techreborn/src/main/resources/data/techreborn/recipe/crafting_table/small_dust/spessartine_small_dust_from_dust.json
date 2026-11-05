@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "techreborn:spessartine_dust"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "techreborn:spessartine_small_dust"
+  }
+}

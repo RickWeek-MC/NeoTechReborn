@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ],
+  "type": "techreborn:grinder",
+  "ingredients": [
+    {
+      "count": 2,
+      "tag": "c:certus_quartz"
+    }
+  ],
+  "outputs": [
+    {
+      "count": 1,
+      "id": "ae2:certus_quartz_dust"
+    }
+  ],
+  "power": 2,
+  "time": 300
+}

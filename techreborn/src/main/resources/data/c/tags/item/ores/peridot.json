@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:deepslate_peridot_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:peridot_ore",
+      "required": false
+    }
+  ]
+}

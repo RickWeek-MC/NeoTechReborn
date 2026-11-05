@@ -1,0 +1,9 @@
+{
+  "values": [
+    "#techreborn:mineable/drill",
+    {
+      "id": "#minecraft:mineable/axe",
+      "required": false
+    }
+  ]
+}

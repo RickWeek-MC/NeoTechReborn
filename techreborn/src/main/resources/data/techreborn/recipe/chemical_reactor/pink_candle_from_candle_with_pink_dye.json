@@ -1,0 +1,20 @@
+{
+  "type": "techreborn:chemical_reactor",
+  "ingredients": [
+    {
+      "item": "minecraft:pink_dye"
+    },
+    {
+      "count": 2,
+      "item": "minecraft:candle"
+    }
+  ],
+  "outputs": [
+    {
+      "count": 2,
+      "id": "minecraft:pink_candle"
+    }
+  ],
+  "power": 25,
+  "time": 250
+}

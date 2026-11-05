@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:raw_silver_storage_block",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "type": "reborncore:padded",
+  "category": "misc",
+  "key": {
+    "U": {
+      "item": "techreborn:uu_matter"
+    }
+  },
+  "pattern": [
+    "   ",
+    "U  ",
+    "U  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "techreborn:raw_lead"
+  }
+}

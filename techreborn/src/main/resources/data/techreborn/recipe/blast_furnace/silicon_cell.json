@@ -1,0 +1,37 @@
+{
+  "type": "techreborn:blast_furnace",
+  "heat": 1500,
+  "ingredients": [
+    {
+      "count": 2,
+      "item": "techreborn:quartz_dust"
+    },
+    {
+      "type": "neoforge:components",
+      "items": "techreborn:cell",
+      "components": {
+        "techreborn:fluid": "techreborn:carbon"
+      },
+      "strict": false,
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "components": {
+        "techreborn:fluid": "techreborn:silicon"
+      },
+      "count": 2,
+      "id": "techreborn:cell"
+    },
+    {
+      "components": {
+        "techreborn:fluid": "techreborn:compressed_air"
+      },
+      "count": 2,
+      "id": "techreborn:cell"
+    }
+  ],
+  "power": 128,
+  "time": 1000
+}

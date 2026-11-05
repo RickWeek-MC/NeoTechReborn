@@ -1,0 +1,23 @@
+{
+  "type": "techreborn:rolling_machine",
+  "category": "misc",
+  "key": {
+    "B": {
+      "tag": "c:ingots/nickel"
+    },
+    "C": {
+      "tag": "c:ingots/chromium"
+    }
+  },
+  "pattern": [
+    " B ",
+    "BCB",
+    " B "
+  ],
+  "power": 5,
+  "result": {
+    "count": 2,
+    "id": "techreborn:nichrome_heating_coil"
+  },
+  "time": 250
+}

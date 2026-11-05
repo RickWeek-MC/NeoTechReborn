@@ -1,0 +1,33 @@
+{
+  "type": "techreborn:chemical_reactor",
+  "ingredients": [
+    {
+      "type": "neoforge:components",
+      "items": "techreborn:cell",
+      "components": {
+        "techreborn:fluid": "techreborn:carbon"
+      },
+      "strict": false
+    },
+    {
+      "type": "neoforge:components",
+      "items": "techreborn:cell",
+      "components": {
+        "techreborn:fluid": "techreborn:hydrogen"
+      },
+      "strict": false,
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "components": {
+        "techreborn:fluid": "techreborn:methane"
+      },
+      "count": 5,
+      "id": "techreborn:cell"
+    }
+  ],
+  "power": 30,
+  "time": 2000
+}

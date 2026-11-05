@@ -1,0 +1,22 @@
+{
+  "type": "techreborn:industrial_grinder",
+  "fluid": {
+    "amount": {
+      "value": 1000
+    },
+    "fluid": "minecraft:water"
+  },
+  "ingredients": [
+    {
+      "tag": "minecraft:coal_ores"
+    }
+  ],
+  "outputs": [
+    {
+      "count": 3,
+      "id": "minecraft:coal"
+    }
+  ],
+  "power": 64,
+  "time": 100
+}

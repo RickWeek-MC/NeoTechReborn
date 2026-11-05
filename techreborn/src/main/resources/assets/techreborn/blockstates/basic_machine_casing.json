@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "neighbors=0": {
+      "model": "techreborn:block/machines/structure/basic_machine_casing_0"
+    },
+    "neighbors=1": {
+      "model": "techreborn:block/machines/structure/basic_machine_casing_1"
+    },
+    "neighbors=2": {
+      "model": "techreborn:block/machines/structure/basic_machine_casing_2"
+    },
+    "neighbors=3": {
+      "model": "techreborn:block/machines/structure/basic_machine_casing_3"
+    },
+    "neighbors=4": {
+      "model": "techreborn:block/machines/structure/basic_machine_casing_4"
+    },
+    "neighbors=5": {
+      "model": "techreborn:block/machines/structure/basic_machine_casing_5"
+    },
+    "neighbors=6": {
+      "model": "techreborn:block/machines/structure/basic_machine_casing_6"
+    },
+    "neighbors=7": {
+      "model": "techreborn:block/machines/structure/basic_machine_casing_7"
+    },
+    "neighbors=8": {
+      "model": "techreborn:block/machines/structure/basic_machine_casing_8"
+    },
+    "neighbors=9": {
+      "model": "techreborn:block/machines/structure/basic_machine_casing_9"
+    },
+    "neighbors=10": {
+      "model": "techreborn:block/machines/structure/basic_machine_casing_10"
+    },
+    "neighbors=11": {
+      "model": "techreborn:block/machines/structure/basic_machine_casing_11"
+    },
+    "neighbors=12": {
+      "model": "techreborn:block/machines/structure/basic_machine_casing_12"
+    },
+    "neighbors=13": {
+      "model": "techreborn:block/machines/structure/basic_machine_casing_13"
+    },
+    "neighbors=14": {
+      "model": "techreborn:block/machines/structure/basic_machine_casing_14"
+    },
+    "neighbors=15": {
+      "model": "techreborn:block/machines/structure/basic_machine_casing_15"
+    }
+  }
+}

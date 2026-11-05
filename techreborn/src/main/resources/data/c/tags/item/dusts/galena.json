@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:galena_dust",
+      "required": false
+    }
+  ]
+}

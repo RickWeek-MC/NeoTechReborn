@@ -1,0 +1,93 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:aluminum_nugget",
+      "required": false
+    },
+    {
+      "id": "techreborn:brass_nugget",
+      "required": false
+    },
+    {
+      "id": "techreborn:bronze_nugget",
+      "required": false
+    },
+    {
+      "id": "techreborn:chrome_nugget",
+      "required": false
+    },
+    {
+      "id": "techreborn:copper_nugget",
+      "required": false
+    },
+    {
+      "id": "techreborn:diamond_nugget",
+      "required": false
+    },
+    {
+      "id": "techreborn:electrum_nugget",
+      "required": false
+    },
+    {
+      "id": "techreborn:emerald_nugget",
+      "required": false
+    },
+    {
+      "id": "techreborn:hot_tungstensteel_nugget",
+      "required": false
+    },
+    {
+      "id": "techreborn:invar_nugget",
+      "required": false
+    },
+    {
+      "id": "techreborn:iridium_nugget",
+      "required": false
+    },
+    {
+      "id": "techreborn:lead_nugget",
+      "required": false
+    },
+    {
+      "id": "techreborn:netherite_nugget",
+      "required": false
+    },
+    {
+      "id": "techreborn:platinum_nugget",
+      "required": false
+    },
+    {
+      "id": "techreborn:refined_iron_nugget",
+      "required": false
+    },
+    {
+      "id": "techreborn:silver_nugget",
+      "required": false
+    },
+    {
+      "id": "techreborn:steel_nugget",
+      "required": false
+    },
+    {
+      "id": "techreborn:tin_nugget",
+      "required": false
+    },
+    {
+      "id": "techreborn:titanium_nugget",
+      "required": false
+    },
+    {
+      "id": "techreborn:tungsten_nugget",
+      "required": false
+    },
+    {
+      "id": "techreborn:tungstensteel_nugget",
+      "required": false
+    },
+    {
+      "id": "techreborn:zinc_nugget",
+      "required": false
+    }
+  ]
+}

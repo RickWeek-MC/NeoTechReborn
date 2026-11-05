@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:tin_ingot",
+      "required": false
+    }
+  ]
+}

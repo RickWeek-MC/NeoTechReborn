@@ -1,0 +1,20 @@
+{
+  "type": "techreborn:chemical_reactor",
+  "ingredients": [
+    {
+      "item": "minecraft:green_dye"
+    },
+    {
+      "count": 8,
+      "item": "minecraft:white_terracotta"
+    }
+  ],
+  "outputs": [
+    {
+      "count": 8,
+      "id": "minecraft:lime_terracotta"
+    }
+  ],
+  "power": 25,
+  "time": 250
+}

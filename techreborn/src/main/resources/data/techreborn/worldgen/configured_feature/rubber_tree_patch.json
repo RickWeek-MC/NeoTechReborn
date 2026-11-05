@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:random_patch",
+  "config": {
+    "feature": "techreborn:rubber_tree",
+    "tries": 6,
+    "xz_spread": 7,
+    "y_spread": 3
+  }
+}

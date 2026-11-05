@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "techreborn:electrum_nugget"
+    },
+    {
+      "item": "techreborn:electrum_nugget"
+    },
+    {
+      "item": "techreborn:electrum_nugget"
+    },
+    {
+      "item": "techreborn:electrum_nugget"
+    },
+    {
+      "item": "techreborn:electrum_nugget"
+    },
+    {
+      "item": "techreborn:electrum_nugget"
+    },
+    {
+      "item": "techreborn:electrum_nugget"
+    },
+    {
+      "item": "techreborn:electrum_nugget"
+    },
+    {
+      "item": "techreborn:electrum_nugget"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "techreborn:electrum_ingot"
+  }
+}

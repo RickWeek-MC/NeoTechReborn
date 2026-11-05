@@ -1,0 +1,36 @@
+{
+  "type": "techreborn:centrifuge",
+  "ingredients": [
+    {
+      "count": 32,
+      "item": "minecraft:glow_berries"
+    },
+    {
+      "type": "neoforge:components",
+      "items": "techreborn:cell",
+      "components": {
+        "techreborn:fluid": "minecraft:empty"
+      },
+      "strict": false
+    }
+  ],
+  "outputs": [
+    {
+      "count": 2,
+      "id": "minecraft:orange_dye"
+    },
+    {
+      "components": {
+        "techreborn:fluid": "techreborn:methane"
+      },
+      "count": 1,
+      "id": "techreborn:cell"
+    },
+    {
+      "count": 2,
+      "id": "minecraft:glowstone_dust"
+    }
+  ],
+  "power": 5,
+  "time": 500
+}

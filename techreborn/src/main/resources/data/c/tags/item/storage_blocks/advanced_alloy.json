@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:advanced_alloy_storage_block",
+      "required": false
+    }
+  ]
+}

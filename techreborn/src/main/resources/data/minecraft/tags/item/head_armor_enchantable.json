@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "techreborn:bronze_helmet",
+    "techreborn:ruby_helmet",
+    "techreborn:sapphire_helmet",
+    "techreborn:peridot_helmet",
+    "techreborn:silver_helmet",
+    "techreborn:steel_helmet",
+    "techreborn:nano_helmet",
+    "techreborn:quantum_helmet"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "#techreborn:rubber_logs",
+    "techreborn:rubber_planks",
+    "techreborn:rubber_stair",
+    "techreborn:rubber_slab",
+    "techreborn:rubber_fence",
+    "techreborn:rubber_fence_gate",
+    "techreborn:rubber_door",
+    "techreborn:rubber_trapdoor",
+    "techreborn:rubber_button",
+    "techreborn:rubber_pressure_plate"
+  ]
+}

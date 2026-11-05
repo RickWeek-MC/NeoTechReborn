@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:bauxite_ore",
+      "required": false
+    },
+    {
+      "id": "techreborn:deepslate_bauxite_ore",
+      "required": false
+    }
+  ]
+}

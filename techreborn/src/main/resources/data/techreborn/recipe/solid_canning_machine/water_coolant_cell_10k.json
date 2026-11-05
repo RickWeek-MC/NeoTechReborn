@@ -1,0 +1,25 @@
+{
+  "type": "techreborn:solid_canning_machine",
+  "ingredients": [
+    {
+      "type": "neoforge:components",
+      "items": "techreborn:cell",
+      "components": {
+        "techreborn:fluid": "minecraft:water"
+      },
+      "strict": false
+    },
+    {
+      "count": 2,
+      "tag": "c:ingots/tin"
+    }
+  ],
+  "outputs": [
+    {
+      "count": 2,
+      "id": "techreborn:water_coolant_cell_10k"
+    }
+  ],
+  "power": 1,
+  "time": 60
+}

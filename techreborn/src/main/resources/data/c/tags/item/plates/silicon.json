@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:silicon_plate",
+      "required": false
+    }
+  ]
+}

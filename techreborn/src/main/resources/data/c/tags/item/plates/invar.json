@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "techreborn:invar_plate",
+      "required": false
+    }
+  ]
+}

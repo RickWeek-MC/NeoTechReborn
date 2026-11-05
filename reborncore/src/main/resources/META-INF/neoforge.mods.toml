@@ -1,0 +1,29 @@
+modLoader = "javafml"
+loaderVersion = "${loader_version_range}"
+license = "${mod_license}"
+issueTrackerURL = "https://github.com/TechReborn/TechReborn/issues"
+
+[[mods]]
+modId = "reborncore"
+version = "${mod_version}"
+displayName = "Neo Reborn Core"
+logoFile = "assets/reborncore/icon.png"
+authors = "${mod_authors}"
+description = '''
+NeoForge port of Reborn Core, the library behind Tech Reborn.
+Original mod by the Tech Reborn team (MIT license).
+'''
+
+[[dependencies.reborncore]]
+modId = "neoforge"
+type = "required"
+versionRange = "${neo_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.reborncore]]
+modId = "minecraft"
+type = "required"
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"
