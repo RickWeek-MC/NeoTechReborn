@@ -25,13 +25,11 @@
 package techreborn.client.render;
 
 import net.minecraft.client.color.item.ItemColor;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Fluids;
 import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
 import reborncore.common.fluid.container.ItemFluidInfo;
-import techreborn.TechReborn;
 
 /**
  * Colours the fluid inside the cell, the layer {@link DynamicCellModel} draws with tint index 1.
@@ -63,19 +61,6 @@ public class CellItemColor implements ItemColor {
 			return WHITE;
 		}
 
-		int color = IClientFluidTypeExtensions.of(fluid).getTintColor();
-
-		// TEMPORARY diagnostics, see DynamicCellModel.debug
-		if (DynamicCellModel.debug("log") && loggedTints < 8) {
-			loggedTints++;
-			TechReborn.LOGGER.info("Cell model: debug tint of {} is 0x{}", BuiltInRegistries.FLUID.getKey(fluid), Integer.toHexString(color));
-		}
-		if (DynamicCellModel.debug("whitetint")) {
-			return WHITE;
-		}
-
-		return color;
+		return IClientFluidTypeExtensions.of(fluid).getTintColor();
 	}
-
-	private static int loggedTints = 0;
 }
