@@ -71,6 +71,7 @@ import techreborn.TechReborn;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -128,6 +129,23 @@ public class DynamicCellModel implements IUnbakedGeometry<DynamicCellModel> {
 	public static final int FLUID_TINT_INDEX = 1;
 
 	/**
+	 * TEMPORARY diagnostics, off unless asked for with a JVM argument, for example
+	 * {@code -Dtechreborn.cell.debug=log,cutout}. Flags, comma separated:
+	 * <ul>
+	 * <li>{@code log}: log the sprite, the tint and the "fabulous" flag for the first few fluids;</li>
+	 * <li>{@code cutout}: draw the fluid layer with a cutout render type instead of translucent;</li>
+	 * <li>{@code bigoffset}: push the fluid and glass layers much further apart (depth test check);</li>
+	 * <li>{@code whitetint}: ignore the fluid colour and tint the fluid layer white.</li>
+	 * </ul>
+	 * Remove this before a release.
+	 */
+	private static final String DEBUG = System.getProperty("techreborn.cell.debug", "");
+
+	public static boolean debug(String flag) {
+		return DEBUG.contains(flag);
+	}
+
+	/**
 	 * The four layers are all at the same depth (the flat base quad and the three boxes of
 	 * cell_fluid_template all sit between z 7.5 and 8.5), and each layer here is a separate drawing pass.
 	 * Two surfaces at the very same depth fight, and the one drawn last is not necessarily the one on
@@ -135,8 +153,8 @@ public class DynamicCellModel implements IUnbakedGeometry<DynamicCellModel> {
 	 * pushed a hair forward and the glass a hair further, exactly as NeoForge's own bucket model does:
 	 * invisible to the eye (under a thousandth of the item's size), enough for the depth test.
 	 */
-	private static final Transformation FLUID_OFFSET = new Transformation(new Vector3f(), new Quaternionf(), new Vector3f(1.0F, 1.0F, 1.002F), new Quaternionf());
-	private static final Transformation GLASS_OFFSET = new Transformation(new Vector3f(), new Quaternionf(), new Vector3f(1.0F, 1.0F, 1.004F), new Quaternionf());
+	private static final Transformation FLUID_OFFSET = new Transformation(new Vector3f(), new Quaternionf(), new Vector3f(1.0F, 1.0F, debug("bigoffset") ? 1.2F : 1.002F), new Quaternionf());
+	private static final Transformation GLASS_OFFSET = new Transformation(new Vector3f(), new Quaternionf(), new Vector3f(1.0F, 1.0F, debug("bigoffset") ? 1.4F : 1.004F), new Quaternionf());
 
 	private final ImmutableMap<String, BlockModel> children;
 
@@ -160,6 +178,7 @@ public class DynamicCellModel implements IUnbakedGeometry<DynamicCellModel> {
 
 		// One fluid layer per fluid, built now: at render time there is only a map lookup left.
 		Map<Fluid, List<BakedModel>> layersByFluid = new HashMap<>();
+		int loggedBakes = 0;
 		for (Fluid fluid : BuiltInRegistries.FLUID) {
 			if (fluid == Fluids.EMPTY) {
 				continue;
@@ -168,6 +187,11 @@ public class DynamicCellModel implements IUnbakedGeometry<DynamicCellModel> {
 			List<BakedQuad> quads = bakeFluidLayer(fluid, spriteGetter, offset(modelState, FLUID_OFFSET));
 			if (quads.isEmpty()) {
 				continue;
+			}
+
+			if (debug("log") && loggedBakes < 6) {
+				loggedBakes++;
+				TechReborn.LOGGER.info("Cell model: debug bake {} -> {} quads, sprite {}", BuiltInRegistries.FLUID.getKey(fluid), quads.size(), quads.getFirst().getSprite().contents().name());
 			}
 
 			BakedModel fluidLayer = buildFluidLayer(context, particle, overrides, quads);
@@ -230,7 +254,9 @@ public class DynamicCellModel implements IUnbakedGeometry<DynamicCellModel> {
 
 	private static BakedModel buildFluidLayer(IGeometryBakingContext context, @Nullable TextureAtlasSprite particle, ItemOverrides overrides, List<BakedQuad> quads) {
 		// Translucent, the same pair of render types NeoForge's own bucket model uses for its fluid layer.
-		RenderTypeGroup renderTypes = new RenderTypeGroup(RenderType.translucent(), NeoForgeRenderTypes.ITEM_UNSORTED_TRANSLUCENT.get());
+		RenderTypeGroup renderTypes = debug("cutout")
+			? new RenderTypeGroup(RenderType.cutout(), NeoForgeRenderTypes.ITEM_LAYERED_CUTOUT.get())
+			: new RenderTypeGroup(RenderType.translucent(), NeoForgeRenderTypes.ITEM_UNSORTED_TRANSLUCENT.get());
 
 		IModelBuilder<?> builder = IModelBuilder.of(context.useAmbientOcclusion(), context.useBlockLight(),
 			context.isGui3d(), context.getTransforms(), overrides, particle, renderTypes);
@@ -255,6 +281,7 @@ public class DynamicCellModel implements IUnbakedGeometry<DynamicCellModel> {
 	private static class Baked implements IDynamicBakedModel {
 		private static boolean loggedEmpty = false;
 		private static boolean loggedFull = false;
+		private static final java.util.Set<Fluid> LOGGED_DRAWS = new HashSet<>();
 
 		private final boolean ambientOcclusion;
 		private final boolean gui3d;
@@ -295,6 +322,10 @@ public class DynamicCellModel implements IUnbakedGeometry<DynamicCellModel> {
 				loggedFull = true;
 				TechReborn.LOGGER.info("Cell model: first FULL cell drawn, fluid is {}, fluid layer {}",
 					BuiltInRegistries.FLUID.getKey(fluid), layers != null ? "found" : "NOT found");
+			}
+
+			if (debug("log") && fluid != Fluids.EMPTY && LOGGED_DRAWS.size() < 8 && LOGGED_DRAWS.add(fluid)) {
+				TechReborn.LOGGER.info("Cell model: debug draw {} -> {} layers, fabulous={}", BuiltInRegistries.FLUID.getKey(fluid), layers == null ? 0 : layers.size(), fabulous);
 			}
 
 			return layers != null ? layers : fixedLayers;
