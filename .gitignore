@@ -32,5 +32,4 @@ _upstream/
 _wip/
 PORTING_NOTES.md
 PORTING_NOTES_REBORNCORE.md
-tools/*.jar
-tools/compilecheck/
+tools/

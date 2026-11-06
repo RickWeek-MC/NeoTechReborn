@@ -42,7 +42,12 @@ The jars end up in `reborncore/build/libs` and `techreborn/build/libs`. You need
 
 - `reborncore/` - Neo Reborn Core
 - `techreborn/` - Neo Tech Reborn
-- `PORTING_NOTES.md` and `PORTING_NOTES_REBORNCORE.md` - the porting log: what was done, what's left, and why
+
+## A note on AI
+
+This port was made with a lot of help from an AI assistant (Claude, by Anthropic). I (RickWeek) decide what gets ported and how, run and test it in game, and I'm the one maintaining it. The AI did much of the heavy lifting: reading the original code, converting it to NeoForge and writing patches.
+
+So if something looks odd, it's more likely a mistake in the port than something from the original mod. Please open an issue and I'll look into it.
 
 ## Credits and license
 
