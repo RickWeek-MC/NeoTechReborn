@@ -233,27 +233,32 @@ public class TRItemGroup {
 		}
 	}
 
-	private static final ItemLike[] rubberOrderSmall = new ItemLike[]{
-		TRContent.RUBBER_LOG,
-		TRContent.RUBBER_LOG_STRIPPED,
-		TRContent.RUBBER_WOOD,
-		TRContent.STRIPPED_RUBBER_WOOD,
-		TRContent.RUBBER_PLANKS,
-		TRContent.RUBBER_STAIR,
-		TRContent.RUBBER_SLAB,
-		TRContent.RUBBER_FENCE,
-		TRContent.RUBBER_FENCE_GATE,
-		TRContent.RUBBER_DOOR,
-		TRContent.RUBBER_TRAPDOOR,
-		TRContent.RUBBER_PRESSURE_PLATE,
-		TRContent.RUBBER_BUTTON
-	};
+	// Built on every call, not once when the class loads: the TRContent fields are assigned in
+	// TRContent.load(), and an array made before that holds nulls for good. The creative tab then
+	// skipped all of these and logged a warning for each one on every rebuild.
+	private static ItemLike[] rubberOrderSmall() {
+		return new ItemLike[]{
+			TRContent.RUBBER_LOG,
+			TRContent.RUBBER_LOG_STRIPPED,
+			TRContent.RUBBER_WOOD,
+			TRContent.STRIPPED_RUBBER_WOOD,
+			TRContent.RUBBER_PLANKS,
+			TRContent.RUBBER_STAIR,
+			TRContent.RUBBER_SLAB,
+			TRContent.RUBBER_FENCE,
+			TRContent.RUBBER_FENCE_GATE,
+			TRContent.RUBBER_DOOR,
+			TRContent.RUBBER_TRAPDOOR,
+			TRContent.RUBBER_PRESSURE_PLATE,
+			TRContent.RUBBER_BUTTON
+		};
+	}
 
 	private static void entries(Tab entries) {
 		// rubber tree and related stuff
 		entries.add(TRContent.RUBBER_SAPLING);
 		entries.add(TRContent.RUBBER_LEAVES);
-		addContent(rubberOrderSmall, entries);
+		addContent(rubberOrderSmall(), entries);
 		entries.add(TRContent.TREE_TAP);
 		addPoweredItem(TRContent.ELECTRIC_TREE_TAP, entries, null, true);
 		entries.add(TRContent.Machine.RESIN_BASIN);
@@ -426,7 +431,7 @@ public class TRItemGroup {
 	}
 
 	private static void addBuildingBlocks(Tab entries) {
-		entries.addAfter(Items.MANGROVE_BUTTON, rubberOrderSmall);
+		entries.addAfter(Items.MANGROVE_BUTTON, rubberOrderSmall());
 		entries.addAfter(Items.AMETHYST_BLOCK,
 			TRContent.MachineBlocks.BASIC.getFrame(),
 			TRContent.MachineBlocks.ADVANCED.getFrame(),
